@@ -1,0 +1,55 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "sonlam",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAzNzU2MzI5ZTdjMTk1M2YxNDk5Y2EiLCJpYXQiOjE2NDQzOTM4Mjd9.ai8EeSn_CnOOeWun6dyfCgx5wBjNXrEvWcB0X40HGPo
+
+{
+    "title": "my third post",
+    "description": "mern",
+    "url": "mearn.com"
+}
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAyODYxMzA1MTVhZGM1M2ZlOTJhNWMiLCJpYXQiOjE2NDQ1MDg3NTB9.B24XXBo6u98MPxd7mob4lHQLRMJPPkYOiPUwmoBtRTA
+
+
+###
+PUT http://localhost:5000/api/posts/62037131242456c000841454
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAyODYxMzA1MTVhZGM1M2ZlOTJhNWMiLCJpYXQiOjE2NDQ1MDg3NTB9.B24XXBo6u98MPxd7mob4lHQLRMJPPkYOiPUwmoBtRTA
+
+{
+    "title": "vue",
+    "description": "vue 2 js",
+    "url": "https://vue.org",
+    "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/62037131242456c000841454
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAyODYxMzA1MTVhZGM1M2ZlOTJhNWMiLCJpYXQiOjE2NDQ1MDg3NTB9.B24XXBo6u98MPxd7mob4lHQLRMJPPkYOiPUwmoBtRTA
+
+###
+GET http://localhost:5000/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjAyODYxMzA1MTVhZGM1M2ZlOTJhNWMiLCJpYXQiOjE2NDQ1MDg3NTB9.B24XXBo6u98MPxd7mob4lHQLRMJPPkYOiPUwmoBtRTA
